@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachineName": {
+            "value": "Chef-DevA"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS13_v2"
+        },
+        "AdminPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/cb051d53-7ccd-4367-86c3-079b57079415/resourceGroups/ABL-KeyVault-Dev/providers/Microsoft.KeyVault/vaults/ABL-KeyVault-Dev"
+                },
+                "secretName": "ablchefautomatedevq"
+            }
+        },
+        "numberOfInstances": {
+            "value": 3
+        },
+        "DataDiskSizeGib" :{
+            "value": 128
+        },
+        "availabilitySetName": {
+            "value": "Chef-Dev-ASN"
+        }
+    }
+}
