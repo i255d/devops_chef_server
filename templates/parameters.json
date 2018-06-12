@@ -26,7 +26,7 @@
             "value": "Chef-Dev-ASNX"
         },
         "sublocation":{
-            "value": "_sublocation_"
+            "value": "_(sublocation)_"
         }
     }
 }
