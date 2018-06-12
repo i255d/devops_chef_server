@@ -24,6 +24,9 @@
         },
         "availabilitySetName": {
             "value": "Chef-Dev-ASNX"
+        },
+        "sublocation":{
+            "value": _<sublocation>_
         }
     }
 }

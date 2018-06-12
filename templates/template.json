@@ -47,10 +47,16 @@
               "metadata": {
                   "Description" : "This requires no value unless numberOfInstances has more that 1.  Default is null."
               }
+          },
+          "sublocation": {
+              "type": "string",
+              "metadata": {
+                  "Description" : "This is the location for testing passing variables through the tolkenizer"
+              }
           }
     },
     "variables": {
-        "location" : "_<sublocation>_",
+        "location" : "[parameters('sublocation')]",
         "devNetworkResourceGroup" : "ABL-Networking-Dev",
         "vnetId": "[resourceId(variables('devNetworkResourceGroup'),'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
