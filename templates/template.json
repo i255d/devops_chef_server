@@ -50,7 +50,7 @@
           }
     },
     "variables": {
-        "location" : "northcentralus",
+        "location" : "_<sublocation>_",
         "devNetworkResourceGroup" : "ABL-Networking-Dev",
         "vnetId": "[resourceId(variables('devNetworkResourceGroup'),'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
