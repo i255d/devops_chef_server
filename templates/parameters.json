@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "virtualMachineName": {
-            "value": "Chef-Dev"
+            "value": "Chef-Dev1"
         },
         "virtualMachineSize": {
             "value": "Standard_DS13_v2"
