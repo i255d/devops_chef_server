@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "virtualMachineName": {
-            "value": "Chef-Dev1"
+            "value": "Chef-Dev"
         },
         "virtualMachineSize": {
-            "value": "Standard_DS13_v2"
+            "value": "Standard_D12_v2"
         },
         "AdminPassword": {
             "reference": {
@@ -23,7 +23,7 @@
             "value": 128
         },
         "availabilitySetName": {
-            "value": "Chef-Dev-ASNX"
+            "value": "Chef-Dev-ASN"
         },
         "sublocation":{
             "value": "__sublocation__"
