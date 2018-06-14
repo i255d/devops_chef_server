@@ -200,7 +200,7 @@
     "outputs": {
         "localAdminUserName": {
             "type": "string",
-            "value": "[variables('localAdminUserName')]"
+            "value": "[parameters('sublocation')]"
         }
     }
 }
