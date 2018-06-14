@@ -6,7 +6,7 @@
             "value": "Chef-Dev"
         },
         "virtualMachineSize": {
-            "value": "Standard_D12_v2"
+            "value": "Standard_DS12_v2"
         },
         "AdminPassword": {
             "reference": {
