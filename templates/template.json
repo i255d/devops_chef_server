@@ -53,18 +53,36 @@
               "metadata": {
                   "Description" : "This is the location for testing passing variables through the tolkenizer"
               }
-          }
+          },
+          "networkrg":{
+              "type": "string",
+              "metadata": {
+                "Description" : "This is the location for testing passing variables through the tolkenizer"
+                }
+            },
+            "virtualnetwork":{
+                "type": "string",
+                "metadata": {
+                    "description" : "This is the location for testing passing variables through the tolkenizer"
+                }
+            },
+          "subnet": {
+              "type": "string",
+              "metadata": {
+                "Description" : "This is the location for testing passing variables through the tolkenizer"
+                }
+            }
     },
     "variables": {
         "location" : "[parameters('sublocation')]",
-        "devNetworkResourceGroup" : "ABL-Networking-Dev",
+        "devNetworkResourceGroup" : "[parameters('networkrg')]",
         "vnetId": "[resourceId(variables('devNetworkResourceGroup'),'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
         "localAdminUserName" : "abl",
         "diagnosticsStorageAccountId" : "/subscriptions/cb051d53-7ccd-4367-86c3-079b57079415/resourceGroups/abl-operations-management-dev/providers/Microsoft.Storage/storageAccounts/ablazurelogsdevnc",
         "diagnosticsStorageAccountName": "ablazurelogsdevnc",
-        "subnetName": "ABL-VMs-Dev-NC",
-        "virtualNetworkName": "Internal-NCentral-Dev",
+        "subnetName": "[parameters('subnet')]",
+        "virtualNetworkName": "[parameters('virtualnetwork')]",
         "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-IP-0')]",
         "availabilitySetPlatformFaultDomainCount": "3",
         "availabilitySetPlatformUpdateDomainCount": "3",

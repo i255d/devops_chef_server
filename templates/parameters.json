@@ -26,7 +26,28 @@
             "value": "Chef-Dev-ASN"
         },
         "sublocation":{
-            "value": "__sublocation__"
+            "value": "__sublocation__",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "networkrg":{
+            "value": "__networkrg__",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "virtualnetwork":{
+            "value": "__virtualnetwork__",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "subnet": {
+            "value": "__subnet__",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
         }
     }
 }
