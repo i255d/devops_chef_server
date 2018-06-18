@@ -45,19 +45,19 @@
               "type": "string",
               "defaultValue": null,
               "metadata": {
-                  "Description" : "This requires no value unless numberOfInstances has more that 1.  Default is null."
+                  "description" : "This requires no value unless numberOfInstances has more that 1.  Default is null."
               }
           },
           "sublocation": {
               "type": "string",
               "metadata": {
-                  "Description" : "This is the location for testing passing variables through the tolkenizer"
+                  "description" : "This is the location for testing passing variables through the tolkenizer"
               }
           },
           "networkrg":{
               "type": "string",
               "metadata": {
-                "Description" : "This is the location for testing passing variables through the tolkenizer"
+                "description" : "This is the location for testing passing variables through the tolkenizer"
                 }
             },
             "virtualnetwork":{
@@ -69,18 +69,18 @@
           "subnet": {
               "type": "string",
               "metadata": {
-                "Description" : "This is the location for testing passing variables through the tolkenizer"
+                "Descdescriptionription" : "This is the location for testing passing variables through the tolkenizer"
                 }
             }
     },
     "variables": {
         "location" : "[parameters('sublocation')]",
-        "devNetworkResourceGroup" : "[parameters('networkrg')]",
-        "vnetId": "[resourceId(variables('devNetworkResourceGroup'),'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
+        "NetworkResourceGroup" : "[parameters('networkrg')]",
+        "vnetId": "[resourceId(variables('NetworkResourceGroup'),'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
         "localAdminUserName" : "abl",
-        "diagnosticsStorageAccountId" : "/subscriptions/cb051d53-7ccd-4367-86c3-079b57079415/resourceGroups/abl-operations-management-dev/providers/Microsoft.Storage/storageAccounts/ablazurelogsdevnc",
-        "diagnosticsStorageAccountName": "ablazurelogsdevnc",
+        "diagnosticsStorageAccountId" : "[parameters('diagnosticsStorageAccountId')]",
+        "diagnosticsStorageAccountName": "[parameters('diagnosticstorage')]",
         "subnetName": "[parameters('subnet')]",
         "virtualNetworkName": "[parameters('virtualnetwork')]",
         "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-IP-0')]",
