@@ -17,7 +17,7 @@
             }
         },
         "numberOfInstances": {
-            "value": 2
+            "value": 3
         },
         "DataDiskSizeGib" :{
             "value": 128
