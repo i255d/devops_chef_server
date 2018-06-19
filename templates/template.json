@@ -232,7 +232,7 @@
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true,
-                        "storageUri": "[reference(resourceId('abl-operations-management-dev', 'Microsoft.Storage/storageAccounts', variables('diagnosticsStorageAccountName')), '2015-06-15').primaryEndpoints['blob']]"
+                        "storageUri": "[reference(resourceId(parameters('diagnosticstoragerg'), 'Microsoft.Storage/storageAccounts', parameters('diagnosticstorage'), '2015-06-15').primaryEndpoints['blob']]"
                     }
                 },
                 "availabilitySet": "[if(not(equals(parameters('availabilitySetName'), 'false')), variables('availabilitySetId'), json('null'))]"
