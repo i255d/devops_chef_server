@@ -38,40 +38,118 @@
             "minValue": 1,
             "maxValue": 5,
             "metadata": {
-              "description": "Number of VMs to deploy, limit 5 since this sample is using a single storage account"
+                "description": "Number of VMs to deploy, limit 5 since this sample is using a single storage account"
             }
-          },
-          "availabilitySetName": {
-              "type": "string",
-              "defaultValue": null,
-              "metadata": {
+        },
+        "availabilitySetName": {
+            "type": "string",
+            "defaultValue": null,
+            "metadata": {
                   "description" : "This requires no value unless numberOfInstances has more that 1.  Default is null."
-              }
-          },
-          "sublocation": {
-              "type": "string",
-              "metadata": {
-                  "description" : "This is the location for testing passing variables through the tolkenizer"
-              }
-          },
-          "networkrg":{
-              "type": "string",
-              "metadata": {
-                "description" : "This is the location for testing passing variables through the tolkenizer"
-                }
-            },
-            "virtualnetwork":{
-                "type": "string",
-                "metadata": {
-                    "description" : "This is the location for testing passing variables through the tolkenizer"
-                }
-            },
-          "subnet": {
-              "type": "string",
-              "metadata": {
-                "Descdescriptionription" : "This is the location for testing passing variables through the tolkenizer"
-                }
             }
+        },
+        "sublocation": {
+            "type": "string",
+            "metadata": {
+                "description" : "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "networkrg":{
+            "type": "string",
+            "metadata": {
+                "description" : "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "virtualnetwork":{
+            "type": "string",
+            "metadata": {
+                "description" : "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "subnet": {
+            "type": "string",
+            "metadata": {
+                "Descdescriptionription" : "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "subscriptionid": {
+            "type": "string",
+            "metadata": {
+                "description" : "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "tenantid": {
+            "type": "string",
+            "metadata": {
+                "description" : "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "keyvaultrg": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "keyvault": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "secretdjuser": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "secretdjss": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "diagnosticstoragerg": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "diagnosticstorage": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "diagnosticsStorageAccountId": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "siterecoveryrg": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "siterecoveryname": {
+            "type": "string", 
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "omsrg": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "omsworkspace": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        }
     },
     "variables": {
         "location" : "[parameters('sublocation')]",
