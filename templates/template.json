@@ -69,7 +69,7 @@
         "subnet": {
             "type": "string",
             "metadata": {
-                "Descdescriptionription" : "This is accepting a group variable specific to the subscription"
+                "description" : "This is accepting a group variable specific to the subscription"
             }
         },
         "subscriptionid": {

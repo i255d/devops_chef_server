@@ -17,7 +17,7 @@
             }
         },
         "numberOfInstances": {
-            "value": 3
+            "value": 2
         },
         "DataDiskSizeGib" :{
             "value": 128
@@ -26,106 +26,55 @@
             "value": "Chef-Dev-ASN"
         },
         "sublocation":{
-            "value": "__sublocation__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__sublocation__"
         },
         "networkrg":{
-            "value": "__networkrg__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__networkrg__"
         },
         "virtualnetwork":{
-            "value": "__virtualnetwork__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__virtualnetwork__"
         },
         "subnet": {
-            "value": "__subnet__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__subnet__"
         },
         "subscriptionid": {
-            "value": "__subscriptionid__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__subscriptionid__"
         },
         "tenantid": {
-            "value": "__tenantid__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__tenantid__"
         },
         "keyvaultrg": {
-            "value": "__keyvaultrg__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__keyvaultrg__"
         },
         "keyvault": {
-            "value": "__keyvault__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__keyvault__"
         },
         "secretdjuser": {
-            "value": "__secretdjuser__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__secretdjuser__"
         },
         "secretdjss": {
-            "value": "__secretdjss__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__secretdjss__"
         },
         "diagnosticstoragerg": {
-            "value": "__diagnosticstoragerg__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__diagnosticstoragerg__"
         },
         "diagnosticstorage": {
-            "value": "__diagnosticstorage__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__diagnosticstorage__"
         },
         "diagnosticsStorageAccountId": {
-            "value": "__diagnosticsStorageAccountId__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__diagnosticsStorageAccountId__"
         },
         "siterecoveryrg": {
-            "value": "__siterecoveryrg__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__siterecoveryrg__"
         },
         "siterecoveryname": {
-            "value": "__siterecoveryname__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__siterecoveryname__"
         },
         "omsrg": {
-            "value": "__omsrg__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__omsrg__"
         },
         "omsworkspace": {
-            "value": "__omsworkspace__",
-            "metadata": {
-                "description": "This is accepting a group variable specific to the subscription"
-            }
+            "value": "__omsworkspace__"
         }
     }
 }
