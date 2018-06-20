@@ -16,7 +16,7 @@
             ]
         },
         "adminPassword": {
-            "type": "string"
+            "type": "securestring"
         },
         "DataDiskSizeGib" : {
             "type": "int",

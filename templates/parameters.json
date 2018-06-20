@@ -12,7 +12,7 @@
             "value": "__ablchefautomateqa__"
         },
         "numberOfInstances": {
-            "value": 3
+            "value": 2
         },
         "DataDiskSizeGib" :{
             "value": 128
