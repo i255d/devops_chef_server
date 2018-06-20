@@ -15,10 +15,10 @@
             "value": 2
         },
         "DataDiskSizeGib" :{
-            "value": 128
+            "value": 32
         },
         "availabilitySetName": {
-            "value": "Chef-Dev-ASN"
+            "value": "Chef-ASN"
         },
         "sublocation":{
             "value": "__sublocation__",
