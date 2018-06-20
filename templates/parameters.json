@@ -9,12 +9,7 @@
             "value": "Standard_DS12_v2"
         },
         "AdminPassword": {
-            "reference": {
-                "keyVault": {
-                    "id": "__keyvaultpath__"
-                },
-                "secretName": "__keyvaultkey__"
-            }
+            "value": "__ablchefautomateqa__"
         },
         "numberOfInstances": {
             "value": 3
