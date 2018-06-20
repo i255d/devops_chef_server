@@ -20,7 +20,7 @@
         },
         "DataDiskSizeGib" : {
             "type": "int",
-            "defaultValue": 32,
+            "defaultValue": 64,
             "allowedValues": [
                 32,
                 64,
