@@ -173,7 +173,6 @@
         "diagnosticsStorageAccountName": "[parameters('diagnosticstorage')]",
         "subnetName": "[parameters('subnet')]",
         "virtualNetworkName": "[parameters('virtualnetwork')]",
-        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-IP-0')]",
         "availabilitySetPlatformFaultDomainCount": "3",
         "availabilitySetPlatformUpdateDomainCount": "3",
         "availabilitySetId": {
@@ -191,7 +190,8 @@
             }
         },
         "envpartialname" : "[variables('envObject')[subscription().displayName]]",
-        "vmname" : "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-0')]"
+        "vmname" : "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-0')]", 
+        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-IP-0')]"
     },
     "resources": [
         {
