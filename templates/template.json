@@ -178,20 +178,20 @@
         "availabilitySetId": {
             "id": "[resourceId('Microsoft.Compute/availabilitySets', parameters('availabilitySetName'))]"
         },
-        "envObject" : {
-            "ist-dev": {
-                "partialname" : "dev"
-            },
-            "ist-qa" : {
-                "partialname" : "qa"
-            },
-            "ist-prod-new" : {
-                "partialname" : "prod"
-            }
-        },
-        "envpartialname" : "[variables('envObject')[subscription().displayName]]",
-        "vmname" : "[concat(parameters('virtualMachineName'), '-', parameters('passthrough'), '-0')]", 
-        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', parameters('passthrough'), '-IP-0')]"
+        // "envObject" : {
+        //     "ist-dev": {
+        //         "partialname" : "dev"
+        //     },
+        //     "ist-qa" : {
+        //         "partialname" : "qa"
+        //     },
+        //     "ist-prod-new" : {
+        //         "partialname" : "prod"
+        //     }
+        // },
+        //"envpartialname" : "[variables('envObject')[subscription().displayName]]",
+        "vmname" : "[concat(parameters('virtualMachineName'), '-', parameters('releaseEnvName'), '-0')]", 
+        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', parameters('releaseEnvName'), '-IP-0')]"
     },
     "resources": [
         {
@@ -321,7 +321,7 @@
     "outputs": {
         "localAdminUserName": {
             "type": "string",
-            "value": "[parameters('passthrough')]"
+            "value": "[parameters('releaseEnvName')]"
         }
     }
 }
