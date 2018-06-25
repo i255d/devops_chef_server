@@ -173,7 +173,7 @@
         "diagnosticsStorageAccountName": "[parameters('diagnosticstorage')]",
         "subnetName": "[parameters('subnet')]",
         "virtualNetworkName": "[parameters('virtualnetwork')]",
-        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-IP-0')]",
+        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-IP-0')]",
         "availabilitySetPlatformFaultDomainCount": "3",
         "availabilitySetPlatformUpdateDomainCount": "3",
         "availabilitySetId": {
