@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "virtualMachineName": {
-            "value": "Chef-Server"
+            "value": "Chef"
         },
         "virtualMachineSize": {
             "value": "Standard_DS12_v2"
@@ -126,6 +126,12 @@
             "value": "__omsworkspace__",
             "metadata": {
                 "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "passthrough" : {
+            "value" : "__Release.EnvironmentName__",
+            "metadata": {
+                "description" : "test"
             }
         }
     }
