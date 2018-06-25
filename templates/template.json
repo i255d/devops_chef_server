@@ -191,7 +191,7 @@
         },
         "envpartialname" : "[variables('envObject')[subscription().displayName]]",
         "vmname" : "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-0')]", 
-        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-IP-0')]"
+        "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', parameters('passthrough'), '-IP-0')]"
     },
     "resources": [
         {
