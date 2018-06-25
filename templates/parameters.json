@@ -128,10 +128,10 @@
                 "description": "This is accepting a group variable specific to the subscription"
             }
         },
-        "passthrough" : {
+        "releaseEnvName" : {
             "value" : "__Release.EnvironmentName__",
             "metadata": {
-                "description" : "test"
+                "description" : "This passed through the release environment name for use in the name, Dev, QA, ProdA and ProdB"
             }
         }
     }

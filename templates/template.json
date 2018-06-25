@@ -156,10 +156,10 @@
                 "description": "This is accepting a group variable specific to the subscription"
             }
         },
-        "passthrough" : {
+        "releaseEnvName" : {
             "type": "string",
             "metadata": {
-                "description" : "passthrough test"
+                "description" : "This passed through the release environment name for use in the name, Dev, QA, ProdA and ProdB"
             }
         }
     },
@@ -190,7 +190,7 @@
             }
         },
         "envpartialname" : "[variables('envObject')[subscription().displayName]]",
-        "vmname" : "[concat(parameters('virtualMachineName'), '-', variables('envpartialname').partialname, '-0')]", 
+        "vmname" : "[concat(parameters('virtualMachineName'), '-', parameters('passthrough'), '-0')]", 
         "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', parameters('passthrough'), '-IP-0')]"
     },
     "resources": [
