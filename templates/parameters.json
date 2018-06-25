@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "virtualMachineName": {
-            "value": "Chef-Dev"
+            "value": "Chef-Server"
         },
         "virtualMachineSize": {
             "value": "Standard_DS12_v2"
@@ -42,6 +42,12 @@
             "value": "__subnet__",
             "metadata": {
                 "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
+        "subnetip" : {
+            "value": "__server-ip__",
+            "metadata": {
+                "description" : "This is first three octets of the IP address to support Copyindex to create the fixed IP's each environment."
             }
         },
         "subscriptionid": {

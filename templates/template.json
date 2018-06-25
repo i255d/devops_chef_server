@@ -72,6 +72,12 @@
                 "description" : "This is accepting a group variable specific to the subscription"
             }
         },
+        "subnetip" : {
+            "type": "string",
+            "metadata": {
+                "description" : "This is first three octets of the IP address to support Copyindex to create the fixed IP's each environment"
+            }
+        },
         "subscriptionid": {
             "type": "string",
             "metadata": {
@@ -285,7 +291,8 @@
                             "subnet": {
                                 "id": "[variables('subnetRef')]"
                             },
-                            "privateIPAllocationMethod": "Dynamic"
+                            "privateIPAllocationMethod": "Static",
+                            "privateIPAddress": "[concat(parameters('subnetip'), '10', copyIndex(0))]"
                         }
                     }
                 ],
