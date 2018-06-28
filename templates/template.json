@@ -15,7 +15,7 @@
                 "Standard_DS15_v2"
             ]
         },
-        "adminPassword": {
+        "adminPublicKey": {
             "type": "securestring"
         },
         "DataDiskSizeGib" : {
@@ -178,18 +178,6 @@
         "availabilitySetId": {
             "id": "[resourceId('Microsoft.Compute/availabilitySets', parameters('availabilitySetName'))]"
         },
-        // "envObject" : {
-        //     "ist-dev": {
-        //         "partialname" : "dev"
-        //     },
-        //     "ist-qa" : {
-        //         "partialname" : "qa"
-        //     },
-        //     "ist-prod-new" : {
-        //         "partialname" : "prod"
-        //     }
-        // },
-        //"envpartialname" : "[variables('envObject')[subscription().displayName]]",
         "vmname" : "[concat(parameters('virtualMachineName'), '-', parameters('releaseEnvName'), '-0')]", 
         "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-', parameters('releaseEnvName'), '-IP-0')]"
     },
@@ -222,10 +210,25 @@
             ],
             "properties": {
                 "osProfile": {
-                    "computerName": "[concat(variables('vmname'), copyIndex(1))]",
+                    "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[variables('localAdminUserName')]",
-                    "adminPassword": "[parameters('adminPassword')]"
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": "true",
+                        "ssh": {
+                            "publicKeys": [
+                                {
+                                    "path": "[concat('/home/', variables('localAdminUserName'), '/.ssh/authorized_keys')]",
+                                    "keyData": "[parameters('adminPublicKey')]"
+                                }
+                            ]
+                        }
+                    }
                 },
+                // "osProfile": {
+                //     "computerName": "[concat(variables('vmname'), copyIndex(1))]",
+                //     "adminUsername": "[variables('localAdminUserName')]",
+                //     "adminPassword": "[parameters('adminPassword')]"
+                // },
                 "hardwareProfile": {
                     "vmSize": "[parameters('virtualMachineSize')]"
                 },

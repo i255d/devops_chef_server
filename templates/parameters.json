@@ -8,8 +8,8 @@
         "virtualMachineSize": {
             "value": "Standard_DS12_v2"
         },
-        "AdminPassword": {
-            "value": "__ablchefautomateqa__"
+        "adminPublicKey": {
+            "value": "__ablPubKey__"
         },
         "numberOfInstances": {
             "value": 2
