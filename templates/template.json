@@ -16,7 +16,7 @@
             ]
         },
         "adminPublicKey": {
-            "type": "securestring"
+            "type": "string"
         },
         "DataDiskSizeGib" : {
             "type": "int",
