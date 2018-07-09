@@ -213,7 +213,7 @@
                     "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[variables('localAdminUserName')]",
                     "linuxConfiguration": {
-                        "disablePasswordAuthentication": true,
+                        "disablePasswordAuthentication": "true",
                         "ssh": {
                             "publicKeys": [
                                 {
