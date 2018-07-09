@@ -96,6 +96,12 @@
                 "description": "This is accepting a group variable specific to the subscription"
             }
         },
+        "keyvault": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
         "secretdjuser": {
             "type": "string",
             "metadata": {

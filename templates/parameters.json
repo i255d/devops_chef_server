@@ -73,6 +73,12 @@
                 "description": "This is accepting a group variable specific to the subscription"
             }
         },
+        "keyvault": {
+            "value": "__keyvault__",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
+        },
         "secretdjuser": {
             "value": "__secretdjuser__",
             "metadata": {
