@@ -11,7 +11,7 @@
         "adminPublicKey": {
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/cb051d53-7ccd-4367-86c3-079b57079415/resourceGroups/ABL-KeyVault-Dev/providers/Microsoft.KeyVault/vaults/ABL-KeyVault-Dev"
+                    "id": "__keyvaultpath__"
                 },
                 "secretName": "ablPubKey"
             }

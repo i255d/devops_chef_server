@@ -210,7 +210,7 @@
             ],
             "properties": {
                 "osProfile": {
-                    "computerName": "[parameters('virtualMachineName')]",
+                    "computerName": "[concat(variables('vmname'), copyIndex(1))]",
                     "adminUsername": "[variables('localAdminUserName')]",
                     "linuxConfiguration": {
                         "disablePasswordAuthentication": "true",
