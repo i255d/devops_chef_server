@@ -9,12 +9,7 @@
             "value": "Standard_DS12_v2"
         },
         "adminPublicKey": {
-            "reference": {
-                "keyVault": {
-                    "id": "__keyvaultpath__"
-                },
-                "secretName": "ablPubKey"
-            }
+            "value": "__ablPubKey__"
         },
         "numberOfInstances": {
             "value": 2
