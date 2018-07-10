@@ -291,6 +291,11 @@
             "name": "[concat('microsoft.vsts-agent-linux-20180627205906-', copyIndex(1))]",
             "apiVersion": "2015-01-01",
             "type": "Microsoft.Resources/deployments",
+            "copy": {
+                "name": "vstsagent",
+                "count": "[parameters('numberOfInstances')]",
+                "mode": "Parallel"
+            },
             "properties": {
                 "mode": "incremental",
                 "templateLink": {
