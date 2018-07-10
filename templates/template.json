@@ -286,6 +286,43 @@
                 ],
                 "enableAcceleratedNetworking": true
             }
+        },
+        {
+            "name": "[concat('microsoft.vsts-agent-linux-20180627205906-', copyIndex(1))]",
+            "apiVersion": "2015-01-01",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "https://gallery.azure.com/artifact/20161101/microsoft.vsts-agent-linux-arm.1.0.0/Artifacts/MainTemplate.json"
+                },
+                "parameters": {
+                    "vmName": {
+                        "value": "[concat(variables('vmname'), copyIndex(1))]"
+                    },
+                    "location": {
+                        "value": "[variables('location')]"
+                    },
+                    "VSTSAccountName": {
+                        "value": "acuitybrandslighting"
+                    },
+                    "TeamProject": {
+                        "value": "Enterprise Architecture"
+                    },
+                    "DeploymentGroup": {
+                        "value": "Chef-Servers"
+                    },
+                    "PATToken": {
+                        "value": "ehx3gasmxtvizvzsichn7gpbu27jmk7wir5wxdpl5etyjcsftrcq"
+                    },
+                    "Tags": {
+                        "value": "ChefServer, Linux, RHEL7"
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/',parameters('virtualMachineName'),'/extensions/', variables('diagnosticsExtensionName'))]"
+            ]
         }
     ],
     "outputs": {
