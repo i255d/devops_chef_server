@@ -326,7 +326,7 @@
                 }
             },
             "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/',parameters('virtualMachineName'),'/extensions/', variables('diagnosticsExtensionName'))]"
+                "[resourceId('Microsoft.Compute/virtualMachines/', concat(variables('vmname'), copyIndex(1)))]"
             ]
         }
     ],
