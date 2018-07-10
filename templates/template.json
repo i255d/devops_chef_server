@@ -324,7 +324,7 @@
                         "value": "Chef-Servers"
                     },
                     "PATToken": {
-                        "value": ""
+                        "value": "[parameters('chefdgpat')]"
                     },
                     "Tags": {
                         "value": "[concat(variables('vmname'), copyIndex(1))]"
