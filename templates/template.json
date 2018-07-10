@@ -224,11 +224,6 @@
                         }
                     }
                 },
-                // "osProfile": {
-                //     "computerName": "[concat(variables('vmname'), copyIndex(1))]",
-                //     "adminUsername": "[variables('localAdminUserName')]",
-                //     "adminPassword": "[parameters('adminPassword')]"
-                // },
                 "hardwareProfile": {
                     "vmSize": "[parameters('virtualMachineSize')]"
                 },
