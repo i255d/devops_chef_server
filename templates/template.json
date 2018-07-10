@@ -327,7 +327,7 @@
                         "value": ""
                     },
                     "Tags": {
-                        "value": "[concat(variables('vmname'), copyIndex(1)))]"
+                        "value": "[concat(variables('vmname'), copyIndex(1))]"
                     }
                 }
             },
