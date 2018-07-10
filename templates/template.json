@@ -161,6 +161,12 @@
             "metadata": {
                 "description" : "This passed through the release environment name for use in the name, Dev, QA, ProdA and ProdB"
             }
+        },
+        "chefdgpat": {
+            "type": "string",
+            "metadata": {
+                "description": "This is accepting a group variable specific to the subscription"
+            }
         }
     },
     "variables": {
@@ -318,10 +324,10 @@
                         "value": "Chef-Servers"
                     },
                     "PATToken": {
-                        "value": "ehx3gasmxtvizvzsichn7gpbu27jmk7wir5wxdpl5etyjcsftrcq"
+                        "value": ""
                     },
                     "Tags": {
-                        "value": "ChefServer, Linux, RHEL7"
+                        "value": "[concat(variables('vmname'), copyIndex(1)))]"
                     }
                 }
             },
