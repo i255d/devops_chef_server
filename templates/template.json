@@ -266,34 +266,6 @@
             }
         },
         {
-            "name": "[concat('microsoft.network-watcher-linux-2018021816052', copyIndex(1))]",
-            "apiVersion": "2015-01-01",
-            "type": "Microsoft.Resources/deployments",
-            "copy" : {
-                "name" : "watcherloop",
-                "count": "[parameters('numberOfInstances')]",
-                "mode": "Parallel"
-            },
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "https://gallery.azure.com/artifact/20161101/microsoft.network-watcher-linux-arm.1.4.14/Artifacts/MainTemplate.json"
-                },
-                "parameters": {
-                    "vmName": {
-                        "value": "[concat(variables('vmname'), copyIndex(1))]"
-                    },
-                    "location": {
-                        "value": "[resourceGroup().location]"
-                    }
-                }
-            },
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines/', concat(variables('vmname'), copyIndex(1)))]"
-                
-            ]
-        },
-        {
             "name": "[concat(variables('networkInterfaceName'), copyIndex(1))]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2016-09-01",
