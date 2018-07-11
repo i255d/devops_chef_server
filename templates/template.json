@@ -327,7 +327,7 @@
                         "value": "[parameters('chefdgpat')]"
                     },
                     "Tags": {
-                        "value": "[concat(variables('vmname'), copyIndex(1))]"
+                        "value": "[if(equals(copyIndex(1), '1'), 'chef', 'automate')]"
                     }
                 }
             },
