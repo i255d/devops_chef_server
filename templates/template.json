@@ -327,7 +327,7 @@
                         "value": "[parameters('chefdgpat')]"
                     },
                     "Tags": {
-                        "value": "[if(equals(copyIndex(1), 1), 'chef', 'automate')]"
+                        "value": "[if(equals(copyIndex(1), 1), 'chef, build', 'automate, build')]"
                     }
                 }
             },
