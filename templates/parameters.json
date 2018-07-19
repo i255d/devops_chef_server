@@ -15,7 +15,7 @@
             "value": 2
         },
         "DataDiskSizeGib" :{
-            "value": 32
+            "value": 64
         },
         "availabilitySetName": {
             "value": "Chef-ASN"
